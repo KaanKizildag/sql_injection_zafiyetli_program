@@ -56,7 +56,7 @@ public class CustomerDao {
         try {
             /// işte zafiyet burada
             String sql = String.format(
-                    "delete from fake where id = 1; delete from fake where id = 3; insert into customers ("
+                    "insert into customers ("
                     + "customer_name, "
                     + "email,"
                     + "phone_number)"

@@ -5,7 +5,8 @@
  */
 package sqli_zafiyet;
 
-import sqli_zafiyet.UI.Frame;
+
+import sqli_zafiyet.ui.Menu;
 
 /**
  *
@@ -14,7 +15,7 @@ import sqli_zafiyet.UI.Frame;
 public class Main {
 
     public static void main(String[] args) {
-        new Frame();
-// yorum eklendi daha yeni yorum
+        Menu menu = new Menu();
+        menu.menuBas();
     }
 }

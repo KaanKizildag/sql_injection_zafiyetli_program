@@ -30,7 +30,7 @@ public class UserDao {
         try {
             /// işte zafiyet burada
             String sql = String.format(
-                    "delete from fake where id = 1; zinsert into users ("
+                    "insert into users ("
                     + "name, "
                     + "password)"
                     + "values ('%s', '%s')",
@@ -105,7 +105,7 @@ public class UserDao {
 
         try {
             String sql = String.format(
-                    "select * from users where"
+                    "select count(*) as sayi from users where"
                     + " name = '%s' and password = '%s'",
                     name,
                     password);
@@ -115,7 +115,7 @@ public class UserDao {
                     .prepareStatement(sql);
 
             ResultSet rs = stat.executeQuery();
-            return rs.next();
+            return rs.getInt("sayi") == 1;
 
         } catch (SQLException ex) {
             Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);

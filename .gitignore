@@ -8,3 +8,4 @@ dist/
 target/
 nbdist/
 .nb-gradle/
+.idea/*
