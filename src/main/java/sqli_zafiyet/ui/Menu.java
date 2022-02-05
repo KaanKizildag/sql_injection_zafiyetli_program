@@ -18,7 +18,7 @@ public class Menu extends EkranElementi {
         // ekraniTemizle();
         System.out.println("1: giriş ekranı");
         System.out.println("2: kayıt ekranı");
-        kayitYap();
+        girisYap();
     }
 
     private String girdiAl(String mesaj) {
